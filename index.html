@@ -9,38 +9,34 @@
 </head>
 <body id="game-container">
     <div id="password-protect">
-        <p>Enter the password to access this page:</p>
+        <p>Introduzir password:</p>
         <input type="password" id="password-input" placeholder="Password">
         <button id="password-submit">Submit</button>
     </div>
 
-    <h1>Welcome to the Handball Challenge!</h1>
+    <h1>Desafio de Andebol de Natal!</h1>
     
         <div id="ball"></div>
         <div id="goal"></div>
         
-        <div id="score-message">You scored!</div>
+        <div id="score-message">Golooo!</div>
     
 
     <div id="scoreboard">Score: 0</div>
 
+    <div class="container-button">
     <button class="custom-btn btn-4" id="retry-button">Retry</button>
-    
-    <div id="special-message">
-        Here's your special message: <strong>You are amazing!</strong>
+    <button class="custom-btn btn-4 hidden" id="message-button">Mensagem</button>
     </div>
-
-    <div id="carousel">
-        <div class="carousel-images">
-            <img src="image1.jpg" alt="Image 1">
-            <img src="image2.jpg" alt="Image 2">
-            <img src="image3.jpg" alt="Image 3">
-        </div>
-        <div class="carousel-buttons">
-            <div class="carousel-button active" data-index="0"></div>
-            <div class="carousel-button" data-index="1"></div>
-            <div class="carousel-button" data-index="2"></div>
-        </div>
+    
+    <div id="thank-you-modal" class="hidden modal">
+        <button id="close-modal" class="custom-btn-close">x</button>
+        <h1>Feliz Natal, Afilhado!</h1>
+        <br>
+        <p>Desejamos-te um Natal cheio de alegria e um Ano de 2025 verdadeiramente memorável!
+        Gostamos imenso de ti e esperamos que a magia desta época se estenda ao longo de todo o ano, especialmente nos momentos que partilhamos contigo.</p> 
+        <br>
+        <p>Para tornar este desejo ainda mais especial, queremos convidar-te para um dia inesquecível a três, cheio de aventuras e diversão no parque Pena Aventura.</p>
     </div>
 
     <script src="script.js"></script>

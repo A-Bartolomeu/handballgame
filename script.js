@@ -7,7 +7,7 @@ passwordSubmit.addEventListener('click', () => {
     if (passwordInput.value === correctPassword) {
         passwordProtect.style.display = 'none';
     } else {
-        alert('Incorrect password!');
+        alert('Palavra-passe incorrecta!');
     }
 });
 
@@ -52,6 +52,9 @@ function resetBallPosition() {
 // Update the scoreboard display
 function updateScore() {
     scoreboard.textContent = `Score: ${score}`;
+    if (score === 5) {
+        showMessageButton(); // Show message button when score reaches 5
+    }
 }
 
 // Handle drag start
@@ -152,6 +155,42 @@ function handleGoalScored() {
     // Reset the ball to the initial position
     resetBallPosition();
 }
+
+// Function to initialize modal behavior
+function initializeModal() {
+    // Get the modal and the close button
+    const modal = document.getElementById('thank-you-modal');
+    const closeButton = document.getElementById('close-modal');
+
+    // Attach event listener to the "Message" button
+    const messageButton = document.getElementById('message-button');
+    messageButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    // Attach event listener to the close button
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+}
+
+// Function to show the "Message" button when the score reaches 5
+function showMessageButton() {
+    const messageButton = document.getElementById('message-button');
+    messageButton.style.display = 'inline-block'; // Make the button visible
+}
+
+// Check the score and handle the "Message" button visibility
+function updateScore() {
+    scoreboard.textContent = `Score: ${score}`;
+
+    if (score === 5) {
+        showMessageButton();
+    }
+}
+
+// Initialize modal functionality when the page loads
+initializeModal();
 
 // Make the ball draggable on touch devices
 ball.addEventListener('touchstart', (e) => {

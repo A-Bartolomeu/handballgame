@@ -50,21 +50,6 @@ h1 {
     cursor: pointer;
 }
 
-/*#game-container {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    height: 300px;
-    margin-top: 20px;
-    /*background-image: url('img/goal_smartphone-01.png'); Placeholder for the goal image 
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-}
-*/
-
 #goal {
     position: absolute;
     width: 38%;
@@ -92,10 +77,10 @@ h1 {
 #score-message {
     display: none;
     position: absolute;
-    top: 20px;
+    top: 160px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(37 36 36 / 70%);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -114,53 +99,6 @@ h1 {
     margin-top: 145px;
 }
 
-#carousel {
-    margin-top: 20px;
-    width: 90%;
-    max-width: 500px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none;
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-images img {
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.carousel-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    display: none;
-}
-
-.carousel-button {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-}
-
-.carousel-button.active {
-    background-color: #333;
-}
-
-/*#retry-button{
-    margin-top: 270px;
-    border: 1px solid white;
-    border-radius: 10px;
-    color: blue;
-}*/
 
 button {
     margin: 20px;
@@ -181,6 +119,9 @@ button {
      7px 7px 20px 0px rgba(0,0,0,.1),
      4px 4px 5px 0px rgba(0,0,0,.1);
     outline: none;
+  }
+  .hidden{
+    display: none;
   }
   
   
@@ -248,7 +189,40 @@ button {
     width: 0%;
     height: .1px;
   }
+
+  .custom-btn-close{
+    margin: 20px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #ccc;
+    position: absolute;
+    margin-top: -12px;
+    margin-left: 140px;
+  }
+
+  .modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+  }
  
+
+  .container-button{
+    display: flex;
+flex-wrap: wrap;
+margin-top: -10px;
+  }
+
+
 
 @media (max-width: 600px) {
     body{
@@ -256,7 +230,33 @@ button {
         background-size: cover;
         overflow: hidden;
     }
+}
 
+@media (max-width: 1126px) {
+   body{
+      background-image: url('img/goal_smartphone-02.png');
+      background-size: cover;
+      overflow: hidden;
+    }
+#goal{
+    position: absolute;
+    width: 33%;
+    height: 8%;
+    top: 362px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h1{
+    padding-top: 30px;
+}
+
+.container-button {
+    margin-top: -20px;
+}
+#scoreboard {
+    margin-top: 110px;
+    padding: 15px;
+}
    
 
     #ball {
