@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Interactive Handball Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="game-container">
+    <div id="password-protect">
+        <p>Enter the password to access this page:</p>
+        <input type="password" id="password-input" placeholder="Password">
+        <button id="password-submit">Submit</button>
+    </div>
+
+    <h1>Welcome to the Handball Challenge!</h1>
+    
+        <div id="ball"></div>
+        <div id="goal"></div>
+        
+        <div id="score-message">You scored!</div>
+    
+
+    <div id="scoreboard">Score: 0</div>
+
+    <button class="custom-btn btn-4" id="retry-button">Retry</button>
+    
+    <div id="special-message">
+        Here's your special message: <strong>You are amazing!</strong>
+    </div>
+
+    <div id="carousel">
+        <div class="carousel-images">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <div class="carousel-buttons">
+            <div class="carousel-button active" data-index="0"></div>
+            <div class="carousel-button" data-index="1"></div>
+            <div class="carousel-button" data-index="2"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
